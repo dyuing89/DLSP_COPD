@@ -1,5 +1,4 @@
 #The following codes were developed by Michael F. Gensheimer and Balasubramanian Narasimhan, and copyright belongs to the original authors. Please look at https://github.com/MGensheimer/nnet-survival for further details.
-
 #loss function
 
 from __future__ import print_function
