@@ -1,1 +1,1 @@
-#All radiographs were converted into numpyz files of x_train with 224x224x3 pre-processed radiograph (image) and y_train of survival array (groundtruth).
+#All radiographs were converted into numpyz files of x_train as a 224x224x3 pre-processed radiograph (image) and y_train as a survival array (groundtruth).
