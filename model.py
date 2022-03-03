@@ -1,4 +1,5 @@
-#All radiographs (dicom files) were converted into numpyz files composed of x_train as a 224x224x3 pre-processed radiograph (image) and y_train as a survival array (groundtruth).
+#All radiographs (dicom files) were converted into numpyz files composed of x_train and y_train.
+#x_train was a 224x224x3 pre-processed radiograph (image).
 
 def img_transform(image_dicom):    
     image = image_dicom.pixel_array.astype(float)
@@ -18,7 +19,9 @@ def img_transform(image_dicom):
     image_final = np.stack((im_x, im_y, im_z), axis = 2)
     
     return image_final
- 
+
+#y_train was a survival array (groundtruth) generated from survival time and censor information
+
 y_train = make_surv_array(y_sur_train, censor_train, breaks)
 y_val = make_surv_array(y_sur_val, censor_val, breaks)
 y_test = make_surv_array(y_sur_test, censor_test, breaks)
